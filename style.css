@@ -1,0 +1,52 @@
+:root { --navy:#1f3a5f; --bg:#f4f6f9; --line:#d9dee6; --text:#222; --muted:#667085; --ok:#2e7d32; --warn:#b26a00; --bad:#c62828; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:var(--bg); color:var(--text); min-height:100vh; display:flex; flex-direction:column; }
+.hidden { display:none !important; }
+.topbar { background:var(--navy); color:#fff; display:flex; justify-content:space-between; align-items:center; padding:12px 20px; }
+.topbar h1 { font-size:20px; margin:0; font-weight:600; }
+#userbar { display:flex; gap:12px; align-items:center; font-size:14px; }
+.container { width:100%; max-width:1000px; margin:20px auto; padding:0 14px; flex:1; }
+.narrow { max-width:520px; }
+.card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:18px; margin-bottom:16px; }
+.tabs { display:flex; gap:4px; margin-bottom:14px; border-bottom:2px solid var(--line); flex-wrap:wrap; }
+.tab { background:none; border:none; padding:10px 16px; font-size:15px; cursor:pointer; color:var(--muted); border-bottom:3px solid transparent; margin-bottom:-2px; }
+.tab.active { color:var(--navy); border-bottom-color:var(--navy); font-weight:600; }
+label { display:block; font-size:13px; font-weight:600; margin:12px 0 4px; }
+input, select { width:100%; padding:9px 10px; border:1px solid var(--line); border-radius:6px; font-size:15px; }
+input:focus, select:focus { outline:2px solid #9db7d9; }
+.btn { border:none; border-radius:6px; padding:9px 16px; font-size:14px; cursor:pointer; }
+.btn.primary { background:var(--navy); color:#fff; margin-top:16px; }
+.btn.light { background:#e9eef5; color:var(--navy); }
+.btn.danger { background:#fdeaea; color:var(--bad); }
+.btn.small { padding:5px 10px; font-size:13px; }
+.btn.full { width:100%; }
+.btn:hover { filter:brightness(.95); }
+.demo h3 { margin:0 0 10px; font-size:16px; }
+.note { font-size:14px; background:#fff8e1; border:1px solid #f0dd9a; padding:8px 10px; border-radius:6px; margin:12px 0 0; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:middle; }
+th { background:#f0f3f8; }
+.tablewrap { overflow-x:auto; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px; }
+.item { background:#fff; border:1px solid var(--line); border-radius:8px; padding:14px; display:flex; flex-direction:column; gap:6px; }
+.item .cat { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; }
+.item .price { font-weight:600; color:var(--navy); }
+.qty { display:inline-flex; align-items:center; gap:8px; }
+.qty button { width:28px; height:28px; border:1px solid var(--line); background:#fff; border-radius:4px; cursor:pointer; }
+.badge { background:var(--navy); color:#fff; border-radius:10px; padding:1px 7px; font-size:12px; }
+.pill { display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:600; background:#e9eef5; color:var(--navy); }
+.pill.Completed, .pill.Paid { background:#e5f4e6; color:var(--ok); }
+.pill.Preparing, .pill.Pending { background:#fff2db; color:var(--warn); }
+.pill.Ready { background:#e0f0ff; color:#0b5cad; }
+.pill.Cancelled { background:#fdeaea; color:var(--bad); }
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin-bottom:16px; }
+.stat { background:#fff; border:1px solid var(--line); border-radius:8px; padding:14px; }
+.stat span { display:block; font-size:13px; color:var(--muted); }
+.stat strong { font-size:22px; color:var(--navy); }
+.row { display:flex; gap:10px; flex-wrap:wrap; align-items:end; }
+.row > div { flex:1; min-width:130px; }
+.toast { position:fixed; top:64px; left:50%; transform:translateX(-50%); padding:10px 18px; border-radius:6px; color:#fff; z-index:10; font-size:14px; }
+.toast.ok { background:var(--ok); } .toast.err { background:var(--bad); }
+.empty { color:var(--muted); text-align:center; padding:24px; }
+footer { text-align:center; font-size:13px; color:var(--muted); padding:14px; }
+@media (max-width:600px) { .topbar h1 { font-size:17px; } }
